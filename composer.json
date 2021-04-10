@@ -23,11 +23,12 @@
     "require": {
         "php": "^8.0",
         "jamarcer/ddd-framework": "dev-main",
-        "jamarcer/symfony-messenger-ddd": "dev-main",
-        "beberlei/assert": "^3.2"
+        "jamarcer/symfony-messenger-logging": "dev-main",
+        "beberlei/assert": "^3.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "dg/bypass-finals": "^1.1"
     },
     "extra": {
         "symfony": {
@@ -42,7 +43,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/jamarcer/symfony-messenger-ddd"
+            "url": "https://github.com/jamarcer/symfony-messenger-logging"
         }
     ]
 }
