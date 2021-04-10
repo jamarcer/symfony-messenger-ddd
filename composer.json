@@ -1,7 +1,7 @@
 {
-    "name": "jamarcer/symfony-console-apm",
-    "description": "Elastic APM for Symfony Console",
-    "version": "2.0.0",
+    "name": "jamarcer/symfony-messenger-ddd",
+    "description": "Symfony Messenger DDD framework",
+    "version": "1.0.0",
     "license": "MIT",
     "type": "library",
     "authors": [
