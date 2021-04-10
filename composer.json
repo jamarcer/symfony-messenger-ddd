@@ -12,19 +12,19 @@
     ],
     "autoload": {
         "psr-4": {
-            "Jamarcer\\APM\\": "src/"
+            "Jamarcer\\SymfonyMessengerBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-          "Jamarcer\\Tests\\APM\\": "tests/"
+          "Jamarcer\\Tests\\SymfonyMessengerBundle\\": "tests/"
         }
     },
     "require": {
         "php": "^8.0",
-        "symfony/console": "^5.0",
-       "symfony/event-dispatcher": "^5.0",
-        "zoilomora/elastic-apm-agent-php": "^1.0"
+        "jamarcer/ddd-framework": "dev-main",
+        "jamarcer/symfony-messenger-ddd": "dev-main",
+        "beberlei/assert": "^3.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5"
@@ -34,5 +34,15 @@
             "allow-contrib": false,
             "require": "5.2.*"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jamarcer/ddd-framework"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/jamarcer/symfony-messenger-ddd"
+        }
+    ]
 }
