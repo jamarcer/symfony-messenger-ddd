@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jamarcer\SymfonyMessengerBundle\DependencyInjection;
 
-use PcComponentes\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageJsonApiSerializable;
-use PcComponentes\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageStreamDeserializer;
-use PcComponentes\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageJsonApiSerializable;
-use PcComponentes\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageStreamDeserializer;
-use PcComponentes\DddLogging\DomainTrace\Tracker;
+use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageJsonApiSerializable;
+use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageStreamDeserializer;
+use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageJsonApiSerializable;
+use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageStreamDeserializer;
+use Jamarcer\DddLogging\DomainTrace\Tracker;
 use Jamarcer\SymfonyMessengerBundle\Serializer\AggregateMessageSerializer;
 use Jamarcer\SymfonyMessengerBundle\Serializer\SimpleMessageSerializer;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;

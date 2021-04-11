@@ -3,13 +3,13 @@ declare(strict_types=1);
 
 namespace Jamarcer\SymfonyMessengerBundle\DependencyInjection;
 
-use PcComponentes\Ddd\Application\Command;
-use PcComponentes\Ddd\Application\Query;
-use PcComponentes\Ddd\Domain\Model\DomainEvent;
-use PcComponentes\Ddd\Domain\Model\Snapshot;
-use PcComponentes\Ddd\Util\Message\AggregateMessage;
-use PcComponentes\Ddd\Util\Message\Serialization\MessageMappingRegistry;
-use PcComponentes\Ddd\Util\Message\SimpleMessage;
+use Jamarcer\Ddd\Application\Command;
+use Jamarcer\Ddd\Application\Query;
+use Jamarcer\Ddd\Domain\Model\DomainEvent;
+use Jamarcer\Ddd\Domain\Model\Snapshot;
+use Jamarcer\Ddd\Util\Message\AggregateMessage;
+use Jamarcer\Ddd\Util\Message\Serialization\MessageMappingRegistry;
+use Jamarcer\Ddd\Util\Message\SimpleMessage;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;

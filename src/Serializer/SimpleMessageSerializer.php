@@ -4,11 +4,11 @@ declare(strict_types=1);
 namespace Jamarcer\SymfonyMessengerBundle\Serializer;
 
 use Assert\Assert;
-use PcComponentes\Ddd\Util\Message\Serialization\Exception\MessageClassNotFoundException;
-use PcComponentes\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageJsonApiSerializable;
-use PcComponentes\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageStream;
-use PcComponentes\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageStreamDeserializer;
-use PcComponentes\DddLogging\DomainTrace\Tracker;
+use Jamarcer\Ddd\Util\Message\Serialization\Exception\MessageClassNotFoundException;
+use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageJsonApiSerializable;
+use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageStream;
+use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageStreamDeserializer;
+use Jamarcer\DddLogging\DomainTrace\Tracker;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Exception\MessageDecodingFailedException;
 

@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Jamarcer\SymfonyMessengerBundle\Serializer;
 
-use PcComponentes\Ddd\Domain\Model\ValueObject\Uuid;
-use PcComponentes\Ddd\Util\Message\Message;
-use PcComponentes\DddLogging\DomainTrace\Tracker;
+use Jamarcer\Ddd\Domain\Model\ValueObject\Uuid;
+use Jamarcer\Ddd\Util\Message\Message;
+use Jamarcer\DddLogging\DomainTrace\Tracker;
 use Symfony\Component\Messenger\Transport\Serialization\SerializerInterface;
 
 abstract class DomainSerializer implements SerializerInterface

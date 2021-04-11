@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace Jamarcer\SymfonyMessengerBundle\Middleware;
 
-use PcComponentes\Ddd\Domain\Model\DomainEvent;
-use PcComponentes\Ddd\Infrastructure\Repository\EventStoreRepository;
+use Jamarcer\Ddd\Domain\Model\DomainEvent;
+use Jamarcer\Ddd\Infrastructure\Repository\EventStoreRepository;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Middleware\MiddlewareInterface;
 use Symfony\Component\Messenger\Middleware\StackInterface;
