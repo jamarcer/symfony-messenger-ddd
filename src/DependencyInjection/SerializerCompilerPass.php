@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace Jamarcer\SymfonyMessengerBundle\DependencyInjection;
 
-use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageJsonApiSerializable;
-use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageStreamDeserializer;
-use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageJsonApiSerializable;
-use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\SimpleMessageStreamDeserializer;
-use Jamarcer\DddLogging\DomainTrace\Tracker;
+use Jamarcer\DDD\Util\Message\Serialization\JsonApi\AggregateMessageJsonApiSerializable;
+use Jamarcer\DDD\Util\Message\Serialization\JsonApi\AggregateMessageStreamDeserializer;
+use Jamarcer\DDD\Util\Message\Serialization\JsonApi\SimpleMessageJsonApiSerializable;
+use Jamarcer\DDD\Util\Message\Serialization\JsonApi\SimpleMessageStreamDeserializer;
+use Jamarcer\DDDLogging\DomainTrace\Tracker;
 use Jamarcer\SymfonyMessengerBundle\Serializer\AggregateMessageSerializer;
 use Jamarcer\SymfonyMessengerBundle\Serializer\SimpleMessageSerializer;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
@@ -22,41 +22,41 @@ final class SerializerCompilerPass implements CompilerPassInterface
         $container->register(Tracker::class, Tracker::class);
 
         $container->addDefinitions([
-            'pccom.messenger_bundle.aggregate_message.serializer' => new Definition(
+            'dddap.messenger.aggregate_message.serializer' => new Definition(
                 AggregateMessageSerializer::class,
                 [
                     new Reference(Tracker::class),
-                    new Reference('pccom.messenger_bundle.aggregate_message.serializer.json_api_serializer'),
-                    new Reference('pccom.messenger_bundle.aggregate_message.serializer.stream_deserializer'),
+                    new Reference('dddap.messenger.aggregate_message.serializer.json_api_serializer'),
+                    new Reference('dddap.messenger.aggregate_message.serializer.stream_deserializer'),
                 ],
             ),
-            'pccom.messenger_bundle.aggregate_message.serializer.json_api_serializer' => new Definition(
+            'dddap.messenger.aggregate_message.serializer.json_api_serializer' => new Definition(
                 AggregateMessageJsonApiSerializable::class,
             ),
-            'pccom.messenger_bundle.aggregate_message.serializer.stream_deserializer' => new Definition(
+            'dddap.messenger.aggregate_message.serializer.stream_deserializer' => new Definition(
                 AggregateMessageStreamDeserializer::class,
                 [
-                    new Reference('pccom.messenger_bundle.mapping_registry.aggregate_message'),
+                    new Reference('dddap.messenger.mapping_registry.aggregate_message'),
                 ],
             ),
         ]);
 
         $container->addDefinitions([
-            'pccom.messenger_bundle.simple_message.serializer' => new Definition(
+            'dddap.messenger.simple_message.serializer' => new Definition(
                 SimpleMessageSerializer::class,
                 [
                     new Reference(Tracker::class),
-                    new Reference('pccom.messenger_bundle.simple_message.serializer.json_api_serializer'),
-                    new Reference('pccom.messenger_bundle.simple_message.serializer.stream_deserializer'),
+                    new Reference('dddap.messenger.simple_message.serializer.json_api_serializer'),
+                    new Reference('dddap.messenger.simple_message.serializer.stream_deserializer'),
                 ],
             ),
-            'pccom.messenger_bundle.simple_message.serializer.json_api_serializer' => new Definition(
+            'dddap.messenger.simple_message.serializer.json_api_serializer' => new Definition(
                 SimpleMessageJsonApiSerializable::class,
             ),
-            'pccom.messenger_bundle.simple_message.serializer.stream_deserializer' => new Definition(
+            'dddap.messenger.simple_message.serializer.stream_deserializer' => new Definition(
                 SimpleMessageStreamDeserializer::class,
                 [
-                    new Reference('pccom.messenger_bundle.mapping_registry.simple_message'),
+                    new Reference('dddap.messenger.mapping_registry.simple_message'),
                 ],
             ),
         ]);

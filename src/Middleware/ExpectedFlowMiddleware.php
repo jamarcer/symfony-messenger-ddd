@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Jamarcer\SymfonyMessengerBundle\Middleware;
 
-use Jamarcer\Ddd\Domain\Exception\ExistsException;
+use Jamarcer\DDD\Domain\Exception\ExistsException;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Exception\UnrecoverableExceptionInterface;
 use Symfony\Component\Messenger\Middleware\MiddlewareInterface;

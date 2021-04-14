@@ -34,7 +34,13 @@ final class SimpleMessagePublisherMiddleware implements MiddlewareInterface
                 continue;
             }
 
-            $this->messageBroker->dispatch($theCommand);
+            if (is_array($theCommand)) {
+                foreach ($theCommand as $singleCommand) {
+                    $this->messageBroker->dispatch($singleCommand);
+                }
+            } else {
+                $this->messageBroker->dispatch($theCommand);
+            }
         }
 
         return $resultStack;

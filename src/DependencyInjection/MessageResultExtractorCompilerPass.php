@@ -15,8 +15,8 @@ final class MessageResultExtractorCompilerPass implements CompilerPassInterface
     {
         $container->addDefinitions(
             [
-                'pccom.messenger_bundle.bus.all_handled.extractor' => new Definition(AllHandledStampExtractor::class),
-                'pccom.messenger_bundle.bus.last_handled.extractor' => new Definition(LastHandledStampExtractor::class),
+                'dddap.messenger.bus.all_handled.extractor' => new Definition(AllHandledStampExtractor::class),
+                'dddap.messenger.bus.last_handled.extractor' => new Definition(LastHandledStampExtractor::class),
             ],
         );
     }

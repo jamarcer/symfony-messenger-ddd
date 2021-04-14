@@ -3,27 +3,27 @@ declare(strict_types=1);
 
 namespace Jamarcer\SymfonyMessengerBundle\DependencyInjection;
 
-use Jamarcer\Ddd\Application\Command;
-use Jamarcer\Ddd\Application\Query;
-use Jamarcer\Ddd\Domain\Model\DomainEvent;
-use Jamarcer\Ddd\Domain\Model\Snapshot;
-use Jamarcer\Ddd\Util\Message\AggregateMessage;
-use Jamarcer\Ddd\Util\Message\Serialization\MessageMappingRegistry;
-use Jamarcer\Ddd\Util\Message\SimpleMessage;
+use Jamarcer\DDD\Application\Command\Command;
+use Jamarcer\DDD\Application\Query\Query;
+use Jamarcer\DDD\Domain\Model\DomainEvent;
+//use Jamarcer\DDD\Domain\Model\Snapshot;
+use Jamarcer\DDD\Util\Message\AggregateMessage;
+use Jamarcer\DDD\Util\Message\Serialization\MessageMappingRegistry;
+use Jamarcer\DDD\Util\Message\SimpleMessage;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 
 final class MappingRegistryCompilerPass implements CompilerPassInterface
 {
-    private const PREFIX_SERVICE_ALIAS = 'pccom.messenger_bundle.mapping_registry';
+    private const PREFIX_SERVICE_ALIAS = 'dddap.messenger.mapping_registry';
     private const INTERFACES = [
         'simple_message' => SimpleMessage::class,
         'command' => Command::class,
         'query' => Query::class,
         'aggregate_message' => AggregateMessage::class,
         'domain_event' => DomainEvent::class,
-        'snapshot' => Snapshot::class,
+//        'snapshot' => Snapshot::class,
     ];
 
     public function process(ContainerBuilder $container): void
@@ -135,7 +135,7 @@ final class MappingRegistryCompilerPass implements CompilerPassInterface
         $result = [];
 
         foreach ($classes as $class) {
-            $result[$class::messageName()] = $class;
+            $result[$class] = $class;
         }
 
         return $result;

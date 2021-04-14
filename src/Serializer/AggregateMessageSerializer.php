@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace Jamarcer\SymfonyMessengerBundle\Serializer;
 
 use Assert\Assert;
-use Jamarcer\Ddd\Domain\Model\ValueObject\DateTimeValueObject;
-use Jamarcer\Ddd\Util\Message\Serialization\Exception\MessageClassNotFoundException;
-use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageJsonApiSerializable;
-use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageStream;
-use Jamarcer\Ddd\Util\Message\Serialization\JsonApi\AggregateMessageStreamDeserializer;
-use Jamarcer\DddLogging\DomainTrace\Tracker;
+use Jamarcer\DDD\Domain\Model\ValueObject\DateTimeValueObject;
+use Jamarcer\DDD\Util\Message\Serialization\Exception\MessageClassNotFoundException;
+use Jamarcer\DDD\Util\Message\Serialization\JsonApi\AggregateMessageJsonApiSerializable;
+use Jamarcer\DDD\Util\Message\Serialization\JsonApi\AggregateMessageStream;
+use Jamarcer\DDD\Util\Message\Serialization\JsonApi\AggregateMessageStreamDeserializer;
+use Jamarcer\DDDLogging\DomainTrace\Tracker;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Exception\MessageDecodingFailedException;
 
