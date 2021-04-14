@@ -17,7 +17,7 @@ final class RoutingKeyMiddleware implements MiddlewareInterface
 
         $envelope = $envelope->with(
             new AmqpStamp(
-                $message::messageName(),
+                $message->messageName(),
             ),
         );
 
