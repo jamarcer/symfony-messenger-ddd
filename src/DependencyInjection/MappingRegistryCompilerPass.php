@@ -135,7 +135,9 @@ final class MappingRegistryCompilerPass implements CompilerPassInterface
         $result = [];
 
         foreach ($classes as $class) {
-            $result[$class] = $class;
+            foreach ($class::messageHandledName() as $name) {
+                $result[$name] = $class;
+            }
         }
 
         return $result;
